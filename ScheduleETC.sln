@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScheduleETC", "ScheduleETC\ScheduleETC.csproj", "{08784C78-01E9-4518-857F-8ADBA170B0B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScheduleObjects", "ScheduleObjects\ScheduleObjects.csproj", "{9F701388-C102-4F3B-860A-2B6EDCB577E9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08784C78-01E9-4518-857F-8ADBA170B0B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08784C78-01E9-4518-857F-8ADBA170B0B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08784C78-01E9-4518-857F-8ADBA170B0B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08784C78-01E9-4518-857F-8ADBA170B0B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F701388-C102-4F3B-860A-2B6EDCB577E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F701388-C102-4F3B-860A-2B6EDCB577E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F701388-C102-4F3B-860A-2B6EDCB577E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F701388-C102-4F3B-860A-2B6EDCB577E9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B8FE2524-BD15-4D17-BA4D-E326C611A932}
+	EndGlobalSection
+EndGlobal
