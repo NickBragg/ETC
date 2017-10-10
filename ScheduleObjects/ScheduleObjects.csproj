@@ -59,6 +59,7 @@
     <Compile Include="Enum\ShiftType.cs" />
     <Compile Include="Location.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Schedule.cs" />
     <Compile Include="ScheduleProcessor.cs" />
     <Compile Include="Shift.cs" />
   </ItemGroup>

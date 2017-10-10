@@ -14,7 +14,7 @@ namespace ScheduleObjects.DatabaseFactory
         const string connectionString = "mongodb://localhost:27017";
 
 
-        public static async void InsertEmployee(Employee employee)
+        public static void InsertEmployee(Employee employee)
         {
             try
             {
@@ -23,7 +23,7 @@ namespace ScheduleObjects.DatabaseFactory
 
                 var collection = _database.GetCollection<Employee>("Employee");
 
-                await collection.InsertOneAsync(employee);
+                collection.InsertOne(employee);
             }
             catch(Exception ex)
             {
@@ -51,6 +51,50 @@ namespace ScheduleObjects.DatabaseFactory
 
 
             return employee;
+        }
+
+        public static List<Employee> GetEmployees()
+        {
+
+            List<Employee> employees = new List<Employee>();
+            try
+            {
+                _client = new MongoClient(connectionString);
+                _database = _client.GetDatabase("ScheduleETC");
+                var filter = Builders<Employee>.Filter.Eq(x => x.IsActive, true);
+                var collection = _database.GetCollection<Employee>("Employee");
+                employees = collection.Find(filter).ToListAsync().Result;
+
+            }
+            catch (Exception ex)
+            {
+                ErrorLogger.LogError(ex, "MongoConnector", "GetEmployees");
+            }
+
+
+            return employees;
+        }
+
+
+        public static List<Location> GetLocations()
+        {
+            List<Location> locations = new List<Location>();
+            try
+            {
+                _client = new MongoClient(connectionString);
+                _database = _client.GetDatabase("ScheduleETC");
+                
+                var collection = _database.GetCollection<Location>("Location");
+                locations = collection.Find(new BsonDocument() { }).ToListAsync().Result;
+
+            }
+            catch (Exception ex)
+            {
+                ErrorLogger.LogError(ex, "MongoConnector", "GetLocations");
+            }
+
+
+            return locations;
         }
 
 

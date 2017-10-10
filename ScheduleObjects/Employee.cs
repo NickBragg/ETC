@@ -14,13 +14,14 @@ namespace ScheduleObjects
         public string LastName { get; set; }
         public EmployeeType EmployeeType { get; set; }
         public bool IsActive { get; set; }
-        public List<DateTime> DaysNeededOff { get; set; }
+        public List<DayOfWeek> DaysNeededOff { get; set; }
         public int NumberOfDaysToWork { get; set; }
+        public int CurrentNumberOfShifts { get; set; }
         #endregion
 
         #region Public Methods
 
-        public bool CreateEmployee(Employee employee)
+        public static bool CreateEmployee(Employee employee)
         {
             //Store New Employee info
 
@@ -29,14 +30,25 @@ namespace ScheduleObjects
             return false;
         }
 
-        public Employee GetEmployee(int employeeID)
+        public static Employee GetEmployee(int employeeID)
         {
             Employee employee = new Employee();
             return employee;
         }
 
-        public bool UpdateEmployeeInfo(Employee info)
+        public static List<Employee> GetAllActiveEmployees()
         {
+            return MongoConnector.GetEmployees();
+        }
+
+        public static bool UpdateEmployeeInfo(Employee info)
+        {
+            return false;
+        }
+
+        public bool IsAvailable(ShiftType shiftType, DayOfWeek dayOfWeek, Employee emplyee)
+        {
+            
             return false;
         }
 

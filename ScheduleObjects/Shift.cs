@@ -8,10 +8,8 @@ namespace ScheduleObjects
 {
     public class Shift
     {
-        public List<Employee> Employees { get; set; }
+        public Employee Employee { get; set; }
         public ShiftType ShiftType { get; set; }
         public DayOfWeek DayOfWeek { get; set; }
-        public Location ShiftLocation { get; set; }
-
     }
 }

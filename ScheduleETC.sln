@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScheduleETC", "ScheduleETC\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScheduleObjects", "ScheduleObjects\ScheduleObjects.csproj", "{9F701388-C102-4F3B-860A-2B6EDCB577E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScheduleTest", "ScheduleTest\ScheduleTest.csproj", "{5CEF9CC2-1C20-46FB-96F8-5FAFE4B5FBD4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9F701388-C102-4F3B-860A-2B6EDCB577E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F701388-C102-4F3B-860A-2B6EDCB577E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F701388-C102-4F3B-860A-2B6EDCB577E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CEF9CC2-1C20-46FB-96F8-5FAFE4B5FBD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CEF9CC2-1C20-46FB-96F8-5FAFE4B5FBD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CEF9CC2-1C20-46FB-96F8-5FAFE4B5FBD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CEF9CC2-1C20-46FB-96F8-5FAFE4B5FBD4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
