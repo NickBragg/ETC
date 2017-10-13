@@ -10,30 +10,18 @@ namespace ScheduleObjects
     public class ScheduleProcessor
     {
 
-        public void Process()
+        public void Process(Location location)
         {
-
-            //Designate openers/schlep
-            //Designate Mids
-            //Designate Closers
-            //Designate 
+            
 
 
-            //Initialize Location will need to be done by user in future
-            Location northLocation = new Location();
-            northLocation.DaysOpen.Add(DayOfWeek.Friday);
-            northLocation.DaysOpen.Add(DayOfWeek.Monday);
-            northLocation.DaysOpen.Add(DayOfWeek.Saturday);
-            northLocation.DaysOpen.Add(DayOfWeek.Sunday);
-            northLocation.DaysOpen.Add(DayOfWeek.Thursday);
-            northLocation.DaysOpen.Add(DayOfWeek.Tuesday);
-            northLocation.DaysOpen.Add(DayOfWeek.Wednesday);
-
+            
+            
 
             List<Employee> employeeList = Employee.GetAllActiveEmployees();
 
 
-            foreach (DayOfWeek day in northLocation.DaysOpen)
+            foreach (DayOfWeek day in location.DaysOpen)
             {
 
                 int schlepers = 1;
@@ -42,42 +30,42 @@ namespace ScheduleObjects
 
                 for (int i = 1; i <= schlepers; i++)
                 {
-                    northLocation.Shifts.Add(new Shift()
+                    location.Shifts.Add(new Shift()
                     {
                         DayOfWeek = day,
                         ShiftType = ShiftType.SCHLEP,
-                        Employee = employeeList.FirstOrDefault(x => x.IsAvailable(ShiftType.SCHLEP, day, x))
+                        Employee = employeeList.FirstOrDefault(x => x.IsAvailable(ShiftType.SCHLEP, day, x, location))
                     });
                 }
 
                 for (int i = 1; i <= openers; i++)
                 {
-                    northLocation.Shifts.Add(new Shift()
+                    location.Shifts.Add(new Shift()
                     {
                         DayOfWeek = day,
                         ShiftType = ShiftType.OPEN,
-                        Employee = employeeList.FirstOrDefault(x => x.IsAvailable(ShiftType.OPEN, day, x))
+                        Employee = employeeList.FirstOrDefault(x => x.IsAvailable(ShiftType.OPEN, day, x, location))
                     });
                 }
 
                 //Add three mid
                 for (int i = 1; i <= midsAndClosers; i++)
                 {
-                    northLocation.Shifts.Add(new Shift()
+                    location.Shifts.Add(new Shift()
                     {
                         DayOfWeek = day,
                         ShiftType = ShiftType.MID,
-                        Employee = employeeList.FirstOrDefault(x => x.IsAvailable(ShiftType.MID, day, x))
+                        Employee = employeeList.FirstOrDefault(x => x.IsAvailable(ShiftType.MID, day, x, location))
                     });
                 }
 
                 for (int i = 1; i <= midsAndClosers; i++)
                 {
-                    northLocation.Shifts.Add(new Shift()
+                    location.Shifts.Add(new Shift()
                     {
                         DayOfWeek = day,
                         ShiftType = ShiftType.CLOSE,
-                        Employee = employeeList.FirstOrDefault(x => x.IsAvailable(ShiftType.CLOSE, day, x))
+                        Employee = employeeList.FirstOrDefault(x => x.IsAvailable(ShiftType.CLOSE, day, x, location))
                     });
                 }
 

@@ -10,11 +10,44 @@ namespace ScheduleTest
     [TestClass]
     public class ScheduleTest
     {
+        ScheduleProcessor processor = new ScheduleProcessor();
+
         [TestMethod]
-        public void Process()
+        public void ProcessNorthLocation()
+        {
+            
+
+            Location location = new Location();
+            location.DaysOpen.Add(DayOfWeek.Friday);
+            location.DaysOpen.Add(DayOfWeek.Monday);
+            location.DaysOpen.Add(DayOfWeek.Saturday);
+            location.DaysOpen.Add(DayOfWeek.Sunday);
+            location.DaysOpen.Add(DayOfWeek.Thursday);
+            location.DaysOpen.Add(DayOfWeek.Tuesday);
+            location.DaysOpen.Add(DayOfWeek.Wednesday);
+            location.EmployeeTypesAccepted.Add(EmployeeType.GREEN);
+            location.EmployeeTypesAccepted.Add(EmployeeType.YELLOW);
+            location.EmployeeTypesAccepted.Add(EmployeeType.RED);
+
+            processor.Process(location);
+        }
+
+        [TestMethod]
+        public void ProcessSouthLocation()
         {
             ScheduleProcessor processor = new ScheduleProcessor();
-            processor.Process();
+
+            Location location = new Location();
+            location.DaysOpen.Add(DayOfWeek.Monday);
+            location.DaysOpen.Add(DayOfWeek.Tuesday);
+            location.DaysOpen.Add(DayOfWeek.Wednesday);
+            location.DaysOpen.Add(DayOfWeek.Thursday);
+            location.DaysOpen.Add(DayOfWeek.Friday);
+            location.DaysOpen.Add(DayOfWeek.Saturday);
+            location.EmployeeTypesAccepted.Add(EmployeeType.GREEN);
+            location.EmployeeTypesAccepted.Add(EmployeeType.YELLOW);
+
+            processor.Process(location);
         }
 
         [TestMethod]
@@ -32,7 +65,7 @@ namespace ScheduleTest
                 FirstName = "Toney",
                 LastName = "Little",
                 IsActive = true,
-                NumberOfDaysToWork = 5
+                MaxNumberOfDaysToWork = 5
             });
 
             daysNeededOff.Add(DayOfWeek.Sunday);
@@ -44,7 +77,7 @@ namespace ScheduleTest
                 FirstName = "Nick",
                 LastName = "Bragg",
                 IsActive = true,
-                NumberOfDaysToWork = 3
+                MaxNumberOfDaysToWork = 3
             });
 
             daysNeededOff = new List<DayOfWeek>();
@@ -58,7 +91,7 @@ namespace ScheduleTest
                 FirstName = "Seth",
                 LastName = "Carroll",
                 IsActive = true,
-                NumberOfDaysToWork = 6
+                MaxNumberOfDaysToWork = 6
             });
 
             daysNeededOff = new List<DayOfWeek>();
@@ -72,7 +105,7 @@ namespace ScheduleTest
                 FirstName = "Jean",
                 LastName = "Rhodes",
                 IsActive = true,
-                NumberOfDaysToWork = 6
+                MaxNumberOfDaysToWork = 6
             });
 
 
@@ -86,7 +119,7 @@ namespace ScheduleTest
                 FirstName = "Test1",
                 LastName = "Test1",
                 IsActive = true,
-                NumberOfDaysToWork = 3
+                MaxNumberOfDaysToWork = 3
             });
 
             daysNeededOff = new List<DayOfWeek>();
@@ -100,7 +133,7 @@ namespace ScheduleTest
                 FirstName = "Test2",
                 LastName = "Test2",
                 IsActive = true,
-                NumberOfDaysToWork = 5
+                MaxNumberOfDaysToWork = 5
 
             });
 
@@ -115,7 +148,7 @@ namespace ScheduleTest
                 FirstName = "Test3",
                 LastName = "Test3",
                 IsActive = true,
-                NumberOfDaysToWork = 5
+                MaxNumberOfDaysToWork = 5
             });
 
             daysNeededOff = new List<DayOfWeek>();
@@ -130,7 +163,7 @@ namespace ScheduleTest
                 FirstName = "Test4",
                 LastName = "Test4",
                 IsActive = true,
-                NumberOfDaysToWork = 5
+                MaxNumberOfDaysToWork = 5
 
             });
 
@@ -146,7 +179,7 @@ namespace ScheduleTest
                 FirstName = "Test5",
                 LastName = "Test5",
                 IsActive = true,
-                NumberOfDaysToWork = 6
+                MaxNumberOfDaysToWork = 6
 
             });
 
@@ -162,7 +195,7 @@ namespace ScheduleTest
                 FirstName = "Test6",
                 LastName = "Test6",
                 IsActive = true,
-                NumberOfDaysToWork = 6
+                MaxNumberOfDaysToWork = 6
 
             });
 
@@ -177,7 +210,7 @@ namespace ScheduleTest
                 FirstName = "Test7",
                 LastName = "Test7",
                 IsActive = true,
-                NumberOfDaysToWork = 6
+                MaxNumberOfDaysToWork = 6
 
             });
 
@@ -196,7 +229,7 @@ namespace ScheduleTest
                 FirstName = "Test8",
                 LastName = "Test8",
                 IsActive = true,
-                NumberOfDaysToWork = 3
+                MaxNumberOfDaysToWork = 3
 
             });
 

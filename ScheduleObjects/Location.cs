@@ -12,8 +12,13 @@ namespace ScheduleObjects
         public string LocationName { get; set; }
         public List<DayOfWeek> DaysOpen { get; set; }
         public List<Shift> Shifts { get; set; }
+        public List<EmployeeType> EmployeeTypesAccepted { get; set; }
 
-
+        public Location()
+        {
+            DaysOpen = new List<DayOfWeek>();
+            Shifts = new List<Shift>();
+        }
 
         public List<Location> GetLocations()
         {
