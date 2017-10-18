@@ -29,7 +29,7 @@ namespace ScheduleObjects
         {
             //Store New Employee info
 
-            MongoConnector.InsertEmployee(employee);
+            MongoConnector.Insert(employee);
 
             return false;
         }

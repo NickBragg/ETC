@@ -14,7 +14,7 @@ namespace ScheduleObjects.DatabaseFactory
         const string connectionString = "mongodb://localhost:27017";
 
 
-        public static void InsertEmployee(Employee employee)
+        public static void Insert(Employee employee)
         {
             try
             {
@@ -27,7 +27,7 @@ namespace ScheduleObjects.DatabaseFactory
             }
             catch(Exception ex)
             {
-                ErrorLogger.LogError(ex, "MongoConnector", "InsertEmployee");
+                ErrorLogger.LogError(ex, "MongoConnector", "Insert");
             }
         }
         
@@ -97,6 +97,21 @@ namespace ScheduleObjects.DatabaseFactory
             return locations;
         }
 
+        public static void Insert(ScheduleError error)
+        {
+            try
+            {
+                _client = new MongoClient(connectionString);
+                _database = _client.GetDatabase("ScheduleETC");
 
+                var collection = _database.GetCollection<ScheduleError>("Errors");
+
+                collection.InsertOne(error);
+            }
+            catch (Exception ex)
+            {
+                ErrorLogger.LogError(ex, "MongoConnector", "Insert");
+            }
+        }
     }
 }

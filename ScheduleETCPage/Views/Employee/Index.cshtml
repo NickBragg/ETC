@@ -1,0 +1,100 @@
+﻿
+@{
+    ViewBag.Title = "Employee";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Employee</h2>
+
+
+<div class="row">
+
+	<div class="row">
+        <div class="col-lg-6">
+            <label class="label-primary">First Name:</label>
+        </div>
+        <div class="col-lg-6">
+            <input type="text" id="inputFirstName" />
+        </div>
+	</div>
+
+	<div class="row">
+        <div class="col-lg-6">
+            <label class="label-primary">Last Name:</label>
+        </div>
+        <div class="col-lg-6">
+            <input type="text" id="inputLastName" />
+        </div>
+	</div>
+
+    @*Employee Type*@
+    <div class="row">
+        <div class="col-lg-6">
+            <label class="label-primary">Employee Type:</label>
+        </div>
+        <div class="col-lg-6">
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropDownEmployeeType" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Dropdown
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a data-employeeType="red">Red</a></li>
+                    <li><a data-employeeType="yellow">Yellow</a></li>
+                    <li><a data-employeeType="green">Green</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <input type="checkbox" aria-label="...">
+                </span>
+                <label class="label-primary">Is Active Employee</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <label class="label-primary">Days Needed Off:</label>
+        </div>
+        <div class="col-lg-6">
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <input type="checkbox" aria-label="...">
+                </span>
+                <label class="label-primary">Sunday</label>
+                <span class="input-group-addon">
+                    <input type="checkbox" aria-label="...">
+                </span>
+                <label class="label-primary">Monday</label>
+                <span class="input-group-addon">
+                    <input type="checkbox" aria-label="...">
+                </span>
+                <label class="label-primary">Tuesday</label>
+                <span class="input-group-addon">
+                    <input type="checkbox" aria-label="...">
+                </span>
+                <label class="label-primary">Wednesday</label>
+                <span class="input-group-addon">
+                    <input type="checkbox" aria-label="...">
+                </span>
+                <label class="label-primary">Thursday</label>
+                <span class="input-group-addon">
+                    <input type="checkbox" aria-label="...">
+                </span>
+                <label class="label-primary">Friday</label>
+                <span class="input-group-addon">
+                    <input type="checkbox" aria-label="...">
+                </span>
+                <label class="label-primary">Saturday</label>
+            </div>
+        </div>
+    </div>
+
+</div>
+

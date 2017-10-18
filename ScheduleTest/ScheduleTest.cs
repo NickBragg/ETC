@@ -57,7 +57,7 @@ namespace ScheduleTest
             List<DayOfWeek> daysNeededOff = new List<DayOfWeek>();
             daysNeededOff.Add(DayOfWeek.Monday);
 
-            MongoConnector.InsertEmployee(new Employee()
+            MongoConnector.Insert(new Employee()
             {
                 EmployeeID = 0,
                 DaysNeededOff = daysNeededOff,
@@ -69,7 +69,7 @@ namespace ScheduleTest
             });
 
             daysNeededOff.Add(DayOfWeek.Sunday);
-            MongoConnector.InsertEmployee(new Employee()
+            MongoConnector.Insert(new Employee()
             {
                 EmployeeID = 1,
                 DaysNeededOff = daysNeededOff,
@@ -83,7 +83,7 @@ namespace ScheduleTest
             daysNeededOff = new List<DayOfWeek>();
             daysNeededOff.Add(DayOfWeek.Wednesday);
             daysNeededOff.Add(DayOfWeek.Tuesday);
-            MongoConnector.InsertEmployee(new Employee()
+            MongoConnector.Insert(new Employee()
             {
                 EmployeeID = 2,
                 DaysNeededOff = daysNeededOff,
@@ -97,7 +97,7 @@ namespace ScheduleTest
             daysNeededOff = new List<DayOfWeek>();
             daysNeededOff.Add(DayOfWeek.Thursday);
             daysNeededOff.Add(DayOfWeek.Tuesday);
-            MongoConnector.InsertEmployee(new Employee()
+            MongoConnector.Insert(new Employee()
             {
                 EmployeeID = 3,
                 DaysNeededOff = daysNeededOff,
@@ -111,7 +111,7 @@ namespace ScheduleTest
 
             daysNeededOff = new List<DayOfWeek>();
             daysNeededOff.Add(DayOfWeek.Sunday);
-            MongoConnector.InsertEmployee(new Employee()
+            MongoConnector.Insert(new Employee()
             {
                 EmployeeID = 4,
                 DaysNeededOff = daysNeededOff,
@@ -125,7 +125,7 @@ namespace ScheduleTest
             daysNeededOff = new List<DayOfWeek>();
             daysNeededOff.Add(DayOfWeek.Sunday);
             daysNeededOff.Add(DayOfWeek.Wednesday);
-            MongoConnector.InsertEmployee(new Employee()
+            MongoConnector.Insert(new Employee()
             {
                 EmployeeID = 5,
                 DaysNeededOff = daysNeededOff,
@@ -140,7 +140,7 @@ namespace ScheduleTest
             daysNeededOff = new List<DayOfWeek>();
             daysNeededOff.Add(DayOfWeek.Monday);
             daysNeededOff.Add(DayOfWeek.Tuesday);
-            MongoConnector.InsertEmployee(new Employee()
+            MongoConnector.Insert(new Employee()
             {
                 EmployeeID = 6,
                 DaysNeededOff = daysNeededOff,
@@ -154,7 +154,7 @@ namespace ScheduleTest
             daysNeededOff = new List<DayOfWeek>();
             daysNeededOff.Add(DayOfWeek.Thursday);
             daysNeededOff.Add(DayOfWeek.Wednesday);
-            MongoConnector.InsertEmployee(new Employee()
+            MongoConnector.Insert(new Employee()
             {
 
                 EmployeeID = 7,
@@ -170,7 +170,7 @@ namespace ScheduleTest
 
             daysNeededOff = new List<DayOfWeek>();
             daysNeededOff.Add(DayOfWeek.Monday);
-            MongoConnector.InsertEmployee(new Employee()
+            MongoConnector.Insert(new Employee()
             {
 
                 EmployeeID = 8,
@@ -186,7 +186,7 @@ namespace ScheduleTest
 
             daysNeededOff = new List<DayOfWeek>();
             daysNeededOff.Add(DayOfWeek.Saturday);
-            MongoConnector.InsertEmployee(new Employee()
+            MongoConnector.Insert(new Employee()
             {
 
                 EmployeeID = 9,
@@ -201,7 +201,7 @@ namespace ScheduleTest
 
             daysNeededOff = new List<DayOfWeek>();
             daysNeededOff.Add(DayOfWeek.Thursday);
-            MongoConnector.InsertEmployee(new Employee()
+            MongoConnector.Insert(new Employee()
             {
 
                 EmployeeID = 10,
@@ -220,7 +220,7 @@ namespace ScheduleTest
             daysNeededOff.Add(DayOfWeek.Wednesday);
             daysNeededOff.Add(DayOfWeek.Thursday);
             daysNeededOff.Add(DayOfWeek.Saturday);
-            MongoConnector.InsertEmployee(new Employee()
+            MongoConnector.Insert(new Employee()
             {
 
                 EmployeeID = 11,
